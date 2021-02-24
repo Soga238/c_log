@@ -43,16 +43,16 @@ int mian(void)
 
 ### 设置模块级别的最小打印等级
 
-在`include "log.h"` 前定义 `LOG_MODULE_MINIMUM_ERROR`, 在该文件下小于此等级的日志不会输出
+在`include "log.h"` 前定义 `LOG_MODULE_LEVEL_ERROR`, 在该文件下小于此等级的日志不会输出
 
 类似的还有其它宏定义
 
 ```c
-//#define LOG_MODULE_MINIMUM_DEBUG
-//#define LOG_MODULE_MINIMUM_INFO
-//#define LOG_MODULE_MINIMUM_WARN
-#define LOG_MODULE_MINIMUM_ERROR
-//#define LOG_MODULE_MINIMUM_CRITICAL
+//#define LOG_MODULE_LEVEL_DEBUG
+//#define LOG_MODULE_LEVEL_INFO
+//#define LOG_MODULE_LEVEL_WARN
+#define LOG_MODULE_LEVEL_ERROR
+//#define LOG_MODULE_LEVEL_CRITICAL
 #include "./log.h"
 ```
 

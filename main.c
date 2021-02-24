@@ -1,4 +1,4 @@
-//#define LOG_MODULE_MINIMUM_ERROR
+#define LOG_MODULE_LEVEL_ERROR
 #include "./log.h"
 
 log_content_t g_tLogger;

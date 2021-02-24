@@ -30,15 +30,15 @@ extern "C" {
 #define LOG_OPT_COLOR           (1 << 5)
 
 /* Global macro ----------------------------------------------------*/
-#if defined(LOG_MODULE_MINIMUM_DEBUG)
+#if defined(LOG_MODULE_LEVEL_DEBUG)
     #define LOG_MODULE_MINIMUM_LEVEL    L_DEBUG
-#elif defined(LOG_MODULE_MINIMUM_INFO)
+#elif defined(LOG_MODULE_LEVEL_INFO)
     #define LOG_MODULE_MINIMUM_LEVEL    L_INFO
-#elif defined(LOG_MODULE_MINIMUM_WARN)
+#elif defined(LOG_MODULE_LEVEL_WARN)
     #define LOG_MODULE_MINIMUM_LEVEL    L_WARN
-#elif defined(LOG_MODULE_MINIMUM_ERROR)
+#elif defined(LOG_MODULE_LEVEL_ERROR)
     #define LOG_MODULE_MINIMUM_LEVEL    L_ERROR
-#elif defined(LOG_MODULE_MINIMUM_CRITICAL)
+#elif defined(LOG_MODULE_LEVEL_CRITICAL)
     #define LOG_MODULE_MINIMUM_LEVEL    L_CRITICAL
 #else
     #define LOG_MODULE_MINIMUM_LEVEL    L_DEBUG
