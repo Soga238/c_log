@@ -40,9 +40,6 @@ void log_port_unlock(void* pUser)
 
 void log_port_output(void *pUser, void *pBuffer, uint32_t wSize)
 {
-    int32_t *p = (int32_t *)pUser;
-    printf("[%d]\n", *p);
-
     for (uint32_t i = 0; i < wSize; ++i) {
         printf("%c", *(char *)pBuffer);
         (char *)pBuffer++;

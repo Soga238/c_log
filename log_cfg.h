@@ -19,7 +19,11 @@ extern "C" {
 
 /* Includes --------------------------------------------------------*/
 /* Global define ---------------------------------------------------*/
-#define LOG_MINIMUM_LEVEL   L_INFO
+#define LOG_MINIMUM_LEVEL   L_DEBUG
+//#define LOG_MINIMUM_LEVEL   L_INFO
+//#define LOG_MINIMUM_LEVEL   L_WARN
+//#define LOG_MINIMUM_LEVEL   L_ERROR
+//#define LOG_MINIMUM_LEVEL   L_CRITICAL
 
 /* Global macro ----------------------------------------------------*/
 /* Global typedef --------------------------------------------------*/

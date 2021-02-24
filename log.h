@@ -82,7 +82,7 @@ extern "C" {
 #define LOG_INIT(__LOGGER, __OUTPUT_DESC_PTR, __USER_PTR) \
     do {log_init(__LOGGER, __OUTPUT_DESC_PTR, __USER_PTR);} while(0)
 
-#define LOG_SET(__LOGGER, OPTION) \
+#define LOG_SET_FORMAT(__LOGGER, OPTION) \
     do {log_set_format(__LOGGER, OPTION);} while(0)
 
 /* Global typedef --------------------------------------------------*/
