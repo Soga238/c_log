@@ -1,6 +1,6 @@
 ## c_log
 
-在单片机环境中使用，一般很少需要动态修改打印等级，也不需要过滤标签、关键字等功能。
+在单片机环境中使用，一般不需要动态修改打印等级，也不需要过滤标签、关键字等功能。
 
 ## 使用方法
 
@@ -18,8 +18,9 @@ log_output_desc_t g_tDesc = {
 int mian(void)
 {
     LOG_INIT(&g_tLogger, &g_tDesc, NULL);
-    LOG_SET_FORMAT(&g_tLogger, LOG_OPT_FUNCTION_NAME |
-                               LOG_OPT_DATETIME |
+    LOG_SET_FORMAT(&g_tLogger, LOG_OPT_FUNCTION_NAME   |
+                               LOG_OPT_LINE_NO         |
+                               LOG_OPT_DATETIME        |
                                LOG_OPT_LEVEL_NAME);
 
     LOG_DEBUG(&g_tLogger, "this is debug\n");
@@ -33,11 +34,11 @@ int mian(void)
 输出结果
 
 ```C
-2021-02-24 15:11:56 main [DEBUG] this is debug
-2021-02-24 15:11:56 main [INFO] this is info
-2021-02-24 15:11:56 main [WARN] [this is warn]
-2021-02-24 15:11:56 main [ERROR] this is error, xxxxxx
-2021-02-24 15:11:56 main [CRITICAL] this is critical
+2021-02-24 15:40:56 main 21 [DEBUG] this is debug
+2021-02-24 15:40:56 main 22 [INFO] this is info
+2021-02-24 15:40:56 main 23 [WARN] [this is warn]
+2021-02-24 15:40:56 main 24 [ERROR] this is error, xxxxxx
+2021-02-24 15:40:56 main 25 [CRITICAL] this is critical
 ```
 
 ### 设置模块级别的最小打印等级
@@ -58,8 +59,8 @@ int mian(void)
 输出结果
 
 ```c
-2021-02-24 15:14:35 main [ERROR] this is error, xxxxxx
-2021-02-24 15:14:35 main [CRITICAL] this is critical
+2021-02-24 15:40:40 main 24 [ERROR] this is error, xxxxxx
+2021-02-24 15:40:40 main 25 [CRITICAL] this is critical
 ```
 
 ### 设置全局的打印最小打印等级

@@ -1,4 +1,4 @@
-#define LOG_MODULE_MINIMUM_ERROR
+//#define LOG_MODULE_MINIMUM_ERROR
 #include "./log.h"
 
 log_content_t g_tLogger;
@@ -13,8 +13,9 @@ int main(void)
 {
     LOG_INIT(&g_tLogger, &g_tDesc, NULL);
     LOG_SET_FORMAT(&g_tLogger,
-                    LOG_OPT_FUNCTION_NAME |
-                    LOG_OPT_DATETIME |
+                    LOG_OPT_FUNCTION_NAME   |
+                    LOG_OPT_LINE_NO         |
+                    LOG_OPT_DATETIME        |
                     LOG_OPT_LEVEL_NAME);
 
     LOG_DEBUG(&g_tLogger, "this is debug\n");
