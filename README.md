@@ -60,7 +60,7 @@ int mian(void)
 
 ### 设置全局的打印最小打印等级
 
-在 `log_cfg.h` 中定义 `LOG_MINIMUM_LEVEL` 的值,小于此等级的日志不会输出
+在 `log_cfg.h` 中定义 `LOG_MINIMUM_LEVEL` 的值, 对于所有`logger`, 小于此等级的日志不会输出
 
 ```c
 #define LOG_MINIMUM_LEVEL   L_INFO
